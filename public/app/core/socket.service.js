@@ -12,7 +12,7 @@
         var stack = [];
         var onmessageDefer;
         var socket = {
-            ws: new WebSocket('ws://'+ location.host),
+            ws: new WebSocket('wss://'+ location.host),
             send: function(data) {
                 //data = JSON.stringify(data);
                 if (socket.ws.readyState == 1) {
