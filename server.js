@@ -11,9 +11,23 @@ var router = express();
 var server = http.createServer(router);
 const ws = new WebSocket.Server({ server });
 
+router.use(requireHTTPS);
 router.use(express.static(__dirname + "/public"));
 router.use(express.bodyParser());
 
+
+function requireHTTPS(req, res, next) {
+  if (req.headers.host != 'localhost:3000') {
+    if (req.headers["x-forwarded-proto"] === "https") {
+      // OK, continue
+      return next();
+    };
+    res.redirect('https://' + req.headers.host + req.url);
+  }
+  else {
+    return next();
+  }
+}
 
 //client websocket
 ws.on('connection', function connection(ws) {
