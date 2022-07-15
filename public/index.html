@@ -1,0 +1,78 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width">
+
+<html lang="en" ng-app="app">
+
+<head>
+    <title>Robota</title>
+
+    <!--Angular material css-->
+    <link href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css" rel="stylesheet" type="text/css">
+    <link href="https://material.angularjs.org/1.1.0-rc.5/docs.css" rel="stylesheet" type="text/css">
+    <!--font css-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet" type="text/css">
+    <!--Custom CSS-->
+    <link href="/content/css/app.css" rel="stylesheet" type="text/css" />
+    <base href="/">
+
+
+
+</head>
+
+<body>
+
+
+    <div layout="column" layout-fill>
+        <!--navbar directive that stays at the top of every page-->
+
+        <gz-navbar flex="none"></gz-navbar>
+        <!--Main content that changes based on route-->
+        <md-content class="main" ui-view></md-content>
+
+    </div>
+
+
+    <!--Third-party JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="//npmcdn.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.7/angular-sanitize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+    <script src="/content/angular-chart.min.js"></script>
+    
+
+
+
+
+    <!--Angular material related-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+
+
+    <!--main app module-->
+    <script src="app/app.module.js"></script>
+
+
+    <!--console module-->
+    <script src="app/console/console.module.js"></script>
+    <script src="app/console/config.route.js"></script>
+    <script src="app/console/console.controller.js"></script>
+    <script src="app/console/analytics/analytics.controller.js"></script>
+
+
+    <!--core module-->
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/socket.service.js"></script>
+
+    <!--layout module-->
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/navbar.directive.js"></script>
+
+</body>
+
+</html>

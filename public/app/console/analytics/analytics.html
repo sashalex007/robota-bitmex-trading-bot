@@ -1,0 +1,92 @@
+<div ng-cloak>
+    <md-content class="md-padding">
+
+        <!--TAB 1 content-->
+        <div layout="column">
+
+            <div flex>
+                <md-card class="chart">
+                    <md-card-header>
+                        <md-card-header-text>
+                            <span class="md-title">BTC-USD:</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <canvas id="base" class="chart-line" chart-data="vm.chartData" chart-series="vm.series" chart-labels="vm.labels" chart-dataset-override="vm.chartOptions"></canvas>
+                    <md-card-content>
+                        <p>
+                            <b>BitMEX:</b> {{vm.price.bitmexRealtime}} <br>
+                        </p>
+                    </md-card-content>
+
+                </md-card>
+            </div>
+
+            <div layout="row">
+
+                <div flex>
+                    <md-card class="chart">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Status</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <md-card-content>
+                            <p>
+                                <b>Robota status:</b> {{vm.price.robotaStatus}}
+                                <br>
+                                <b>BitMEX status:</b> {{vm.price.bitmexAvailable}}
+                                <br>
+                                <b>Candle time (server): </b> {{vm.price.candleTimeLeft}}
+                                <br>
+                                <b>Candle count:</b> {{vm.data.candleCount}}
+                            </p>
+
+
+                            <p>{{vm.startMessage}}</p>
+                            
+                        </md-card-content>
+                    </md-card>
+                </div>
+
+                <div layout="column">
+                <div flex>
+                    <md-card class="chart">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Trading</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <md-card-content>
+                            <p>
+                                <b>Action:</b> {{vm.data.trade.action}}
+                            </p>
+                        </md-card-content>
+                    </md-card>
+                </div>
+
+                <div flex>
+                    <md-card class="chart">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Engine Analysis</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <md-card-content>
+                            <p>
+                                <b>Leading A:</b> {{vm.data.trade.leadingA}}
+                                <br>
+                                <b>Leading B:</b> {{vm.data.trade.leadingB}}
+                                <br>
+                                <b>MACD Histogram:</b> {{vm.data.trade.macdHist}}
+                                <br>
+                                <b>ATR:</b> {{vm.data.trade.atr}}
+                            </p>
+                        </md-card-content>
+                    </md-card>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </md-content>
+</div>
