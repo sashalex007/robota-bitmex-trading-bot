@@ -2,6 +2,9 @@
 
 ![Screenshot](screenshot.png)
 
+### Demo
+https://robota-bitmex-bot.herokuapp.com/console
+
 A bitmex trading bot built on nodeJS with an AngularJS frontend. This server downloads the latest 750 candles, and then automatically syncs with the bitmex server to provide a true real-time feed with minimum latency. Ticker and candle duration can be changed.
 
 Write your own trading logic in `robota/tradingengine.js`. 
