@@ -9,10 +9,14 @@
     
 
     function socketService() {
+        var socketString = 'wss://';
+        if(location.host == 'localhost:3000'){
+            socketString = 'ws://';
+        }
         var stack = [];
         var onmessageDefer;
         var socket = {
-            ws: new WebSocket('wss://'+ location.host),
+            ws: new WebSocket(socketString + location.host),
             send: function(data) {
                 //data = JSON.stringify(data);
                 if (socket.ws.readyState == 1) {
