@@ -160,7 +160,7 @@ function calculateMACDhist(array) {
 
     //console.log( macdHist + "  " + macdLine + "  " + signalLine)
 
-    return macdHist
+    return Math.round(macdHist * 100) / 100
 }
 
 function calculateATR(array, period) {
@@ -198,6 +198,6 @@ function calculateATR(array, period) {
 
     }
 
-    return currentATR
+    return Math.round(currentATR * 100) / 100
 
 }
