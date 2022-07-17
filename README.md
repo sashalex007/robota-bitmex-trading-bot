@@ -13,7 +13,5 @@ I had this bot opening and closing positions automatically, but it seems that bi
 Run with `node server.js`, dont forget to run `npm install`
 
 Related projects: 
-
 https://github.com/sashalex007/Backtesting-simulator
-
 https://github.com/sashalex007/bitmex-historical-data-downloader
